@@ -23,6 +23,7 @@
     </developers>
     <modules>
         <module>completable-future</module>
+        <module>inter-thread-communication</module>
     </modules>
     <scm>
         <connection/>
