@@ -24,6 +24,7 @@
     <modules>
         <module>completable-future</module>
         <module>inter-thread-communication</module>
+        <module>callable-runnable</module>
     </modules>
     <scm>
         <connection/>
