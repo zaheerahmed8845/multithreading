@@ -21,6 +21,7 @@
         <module>parallelism</module>
         <module>pipelining</module>
         <module>pipelining-tasks</module>
+        <module>thenApply-vs-thenCompose</module>
     </modules>
 
 </project>
