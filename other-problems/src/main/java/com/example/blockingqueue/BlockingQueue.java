@@ -1,4 +1,4 @@
-package com.example;
+package com.example.blockingqueue;
 
 import java.util.LinkedList;
 import java.util.Queue;
