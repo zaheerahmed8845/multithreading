@@ -42,7 +42,6 @@ public class WaitNotifyExample {
             try {
                 resource.produce();
             } catch (InterruptedException ignored) {
-
             }
         });
 
