@@ -17,7 +17,10 @@ public class DeadlockExample {
             synchronized (resourceA) {
                 System.out.println(Thread.currentThread().getName() + " locked " + resourceA.name);
 
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                }
 
                 synchronized (resourceB) {
                     System.out.println(Thread.currentThread().getName() + " locked " + resourceB.name);
@@ -29,7 +32,10 @@ public class DeadlockExample {
             synchronized (resourceB) {
                 System.out.println(Thread.currentThread().getName() + " locked " + resourceB.name);
 
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                }
 
                 synchronized (resourceA) {
                     System.out.println(Thread.currentThread().getName() + " locked " + resourceA.name);

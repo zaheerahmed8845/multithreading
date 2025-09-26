@@ -6,19 +6,21 @@ import java.util.concurrent.TimeUnit;
 
 public class RealWorldExample {
 
-    record User(int id, String name){}
+    record User(int id, String name) {
+    }
 
-    record Order(int id, int userId){}
+    record Order(int id, int userId) {
+    }
 
     public static void main(String[] args) throws InterruptedException {
         fetchUserOrders();
         TimeUnit.MILLISECONDS.sleep(100);
     }
 
-    private  static void fetchUserOrders() {
+    private static void fetchUserOrders() {
         getUser(101)
                 .thenCompose(RealWorldExample::getUserOrders)  // Fetch orders after fetching user
-                .thenAccept(orders -> orders.forEach(order -> System.out.println("Order id : "+order.id())));
+                .thenAccept(orders -> orders.forEach(order -> System.out.println("Order id : " + order.id())));
     }
 
     private static CompletableFuture<User> getUser(int userId) {
