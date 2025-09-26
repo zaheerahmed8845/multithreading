@@ -5,7 +5,8 @@ class Task implements Runnable {
         try {
             Thread.sleep(1000);
             System.out.println("Task Completed");
-        } catch (InterruptedException ignored) {}
+        } catch (InterruptedException ignored) {
+        }
     }
 }
 

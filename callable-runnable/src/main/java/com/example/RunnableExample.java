@@ -17,5 +17,8 @@ public class RunnableExample implements Runnable {
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(runnableExample);
+
+
+        executor.shutdown();
     }
 }

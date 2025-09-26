@@ -8,7 +8,10 @@ public class CyclicBarrierExample {
 
         Runnable task = () -> {
             System.out.println(Thread.currentThread().getName() + " is waiting...");
-            try { barrier.await(); } catch (Exception ignored) {}
+            try {
+                barrier.await();
+            } catch (Exception ignored) {
+            }
             System.out.println(Thread.currentThread().getName() + " continues execution.");
         };
 
