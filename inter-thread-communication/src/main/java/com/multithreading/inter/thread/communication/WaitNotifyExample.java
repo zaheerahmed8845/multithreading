@@ -21,7 +21,7 @@ class SharedResource {
         notify(); // Notify producer
     }
 
-    public void waitWithoutLock(){
+    public void waitWithoutLock() {
         try {
             wait();
         } catch (InterruptedException e) {
@@ -29,7 +29,7 @@ class SharedResource {
         }
     }
 
-    public void notifyWithoutLock(){
+    public void notifyWithoutLock() {
         notify();
     }
 }
@@ -48,7 +48,8 @@ public class WaitNotifyExample {
         Thread consumer = new Thread(() -> {
             try {
                 resource.consume();
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException ignored) {
+            }
         });
 
         producer.start();
